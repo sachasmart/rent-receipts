@@ -5,6 +5,7 @@ Generate Rent receipts for a given period of time. The script will generate rece
 ## Setup
 
 ```
+make setup
 pip install -r requirements.txt
 python ./main.py
 ```
