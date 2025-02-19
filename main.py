@@ -33,7 +33,7 @@ def render_rent_receipt(month, year):
         "GENERATED_DATE": datetime.date.today().strftime("%d %B, %Y"),
     }
 
-    output_folder = "output/"
+    output_folder = f"output/{year}"
     os.makedirs(output_folder, exist_ok=True)
     month_name = calendar.month_name[month]
     output_md_path = os.path.join(output_folder, f"{month_name} {year}.md")
@@ -63,9 +63,9 @@ def create_rent_receipts(start_month, end_month, year):
 
 
 def main():
-    year = 2024
-    start_month = 8
-    end_month = 12
+    year = 2025
+    start_month = 1
+    end_month = 2
     create_rent_receipts(start_month, end_month, year)
 
 
